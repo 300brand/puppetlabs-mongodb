@@ -1,8 +1,12 @@
 # mongo.conf - generated from Puppet
 
 #where to log
+<% if @syslog -%>
+syslog = <%= @syslog %>
+<% else -%>
 logpath=<%= @_logpath %>
 logappend=<%= @logappend %>
+<% end -%>
 
 # fork and run in background
 fork = <%= @_fork %>
