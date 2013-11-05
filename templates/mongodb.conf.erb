@@ -8,6 +8,11 @@ logpath=<%= @_logpath %>
 logappend=<%= @logappend %>
 <% end -%>
 
+<% if @configsvr -%>
+# Config server (mongocfg)
+configsvr = true
+<% end -%>
+
 # fork and run in background
 fork = <%= @_fork %>
 port = <%= @port %>
