@@ -21,7 +21,11 @@ configdb = <%= @configdb.join(',') %>
 # fork and run in background
 fork = <%= @_fork %>
 port = <%= @port %>
+
+<% if !@mongos -%>
 dbpath= <%= @_dbpath %>
+<% end -%>
+
 <% if @_pidfilepath -%>
 pidfilepath = <%= @_pidfilepath %>
 <% end -%>
