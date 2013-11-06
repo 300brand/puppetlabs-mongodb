@@ -13,6 +13,11 @@ logappend=<%= @logappend %>
 configsvr = true
 <% end -%>
 
+<% if !@configdb.empty? -%>
+# Config databases (mongos)
+configdb = <%= @configdb.join(',') %>
+<% end -%>
+
 # fork and run in background
 fork = <%= @_fork %>
 port = <%= @port %>

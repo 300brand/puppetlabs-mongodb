@@ -74,6 +74,7 @@ class mongodb (
   $bind_ip         = undef,
   $pidfilepath     = undef,
   $configsvr       = undef,
+  $configdb        = [],
   $syslog          = undef
 ) inherits mongodb::params {
   if $enable_10gen {
